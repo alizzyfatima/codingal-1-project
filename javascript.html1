@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <p id="first"> </p>
+    <p id="second"></p>
+    <script>
+document.getElementById("first").innerHTML=" hello html people welcome to java"
+var x=5
+var y=10
+var z=100
+var sum=x+y+z
+document.getElementById("second").innerHTML=sum
+    </script>
+</body>
+</html>
