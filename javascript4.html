@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var girl={name:"alizy",
+        age:14,
+        colour:"black",
+        hobby:"coding"
+        }
+        document.write( girl.name+girl.age+girl.colour+girl.hobby)
+        function numbers(){
+            var max=0;
+            for(i=0;i<arguments.length;i++){ 
+                if( arguments[i]>max) {
+                    max=arguments[i]    
+                 }            
+            }
+            return max  } 
+            document.write("<br>")
+            document.write( numbers(5,78,23,24,90,31,21,12,0))
+    
+    </script>
+</body>
+</html>
