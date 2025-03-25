@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="subject1"> </p>
+    <p id="subject2"> </p>
+    <script>
+        class student { 
+            constructor(name,year){
+                this.name = name ;
+                this.year = year;
+            }
+        
+        age(){
+            let date = new Date();
+            return date.getFullYear() -
+            this.year;
+        }
+         }
+         subject1 = new student("amaan",2016);
+         document.getElementById("subject1").innerHTML=
+         "My name is " + subject1.name + " I was born on "+
+         subject1.year + " and my age is "+ 
+         subject1.age();
+
+         subject2 = new student("ayaan",2015);
+         document.getElementById("subject2").innerHTML=
+         "My name is " + subject2.name + " I was born on "+
+         subject2.year + " and my age is "+ 
+         subject2.age();
+         
+    </script>
+</body>
+</html>
