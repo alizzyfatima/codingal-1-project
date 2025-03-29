@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    h1{
+        color: pink;
+    }
+    h2{ 
+        color: rgb(210, 157, 241);
+    }
+  
+    </style>
+</head>
+<body>
+    <h1>My JaVaScRiPt CoDiNg SuMmArY </h1>
+  <h2> <i>Simple Caculator</i>🧮</h2>
+   <h2><i>Methods and loops🔁</i></h2>
+   <h2><i>Sum of arguments</i>➕</h2>
+    <p id="first"></p>
+    <p id="second"></p>
+     <p id="third"></p>
+     <p id="fourth"></p>
+     <p id="fifth"></p>
+    
+
+    <script>
+document.getElementById("first").innerHTML=" math 1"
+var x=9
+var y=2
+var z=6
+var a=3 
+var sum=x+y+a+z
+var mul=x/y
+document.getElementById("fifth").innerHTML=mul
+document.getElementById("second").innerHTML=sum
+document.getElementById("third").innerHTML=" math 2 "
+var e=6
+var s=5
+var t=4
+var u=1
+var sum=e+s+t+u
+  document.getElementById("fourth").innerHTML=sum
+ 
+        var Methodsandloops="MethODs aNd lOopS "
+        document.write(Methodsandloops.toUpperCase())
+        document.write("<br>")
+        document.write(Methodsandloops.toLowerCase() )
+        document.write("<br>")
+        document.write(Methodsandloops.startsWith("M"))
+        document.write("<br>")
+document.write(Math.random ())
+document.write("<br>")
+for(i=1;i<13;i++){
+ document.write("Methods and loops")
+ document.write("<br>")
+}
+document.write("<br>")
+var boy={name:"harry",
+        surname:"potter",
+        age:14,
+        colour:"black",
+        hobby:"wizard"
+        }
+        document.write( boy.name+boy.surname+boy.age+boy.colour+boy.hobby)
+        function numbers(){
+            var max=0;
+            for(i=0;i<arguments.length;i++){ 
+                if( arguments[i]>max) {
+                    max=arguments[i]    
+                 }            
+            }
+            return max  } 
+            document.write("<br>")
+            document.write( numbers(5,78,23,24,90,31,21,12,0))
+    </script>
+</body>
+</html>
