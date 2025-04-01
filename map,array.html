@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button onclick="sortfunction()">
+            press to sort me </button>
+        <button onclick="reversefunction()">
+                press to reverse me 
+            </button>
+    </p>
+    <p id="result"> </p>
+    <p>
+        <button onclick="ascending()">
+            ascending order</button>
+        <button onclick="descending()">
+                descending order 
+            </button>
+    </p>
+    <p id="result"> </p>
+
+    <script>
+    var students = ["radiyah","humairah","alizy","rayyanah",
+        "hassnanah","naqiyah","amaanah","sameeha","zainab"
+        ,"nailah","fatimah","saffiyah","zahra"
+    ];
+    document.getElementById("result").innerHTML=students;
+    function sortfunction() {
+        students.sort();
+        document.getElementById("result").innerHTML=
+        students;
+    }
+    function reversefunction() {
+        students.reverse();
+        document.getElementById("result").innerHTML = 
+        students;
+    }
+    var points = [70,700,7,75,710];
+    document.getElementById("result").innerHTML=points;
+    function ascending() {
+        points.sort(function(a,b) {return a-b});
+        document.getElementById("result").innerHTML=points;
+    }
+    function descending() {
+        points.sort(function(a,b) {return b-a});
+        document.getElementById("result").innerHTML=points;
+    }
+
+    </script>
+</body>
+</html>
