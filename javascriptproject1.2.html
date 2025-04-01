@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{
+            color: rgb(0, 255, 162);
+        }
+        h2{
+            color: rgb(11, 153, 153);
+        }
+        i{
+            color: rgb(66, 216, 103);
+        }
+    </style>
+</head>
+<body>
+    <p id="TravelPackingList">
+    </p>
+    <h1 id="list">
+    </h1>
+   <script>
+    var TravelPackingList=["Passport","ID,","travel tickets",
+    "Credit cards","cash,Phone", "charger","Comfortable outfits",
+    "Toiletries","Tech and Entertainment", "medications"
+    ]
+    document.getElementById("TravelPackingList").innerHTML=TravelPackingList
+    [9]
+    document.getElementById("list").innerHTML= TravelPackingList.join(" & ")
+    TravelPackingList.pop()
+    document.write(TravelPackingList)
+    document.write("<br>")
+    TravelPackingList.pop()
+    document.write(TravelPackingList) 
+    document.write("<br>")
+    TravelPackingList.pop()
+    document.write(TravelPackingList) 
+    document.write("<br>")
+    TravelPackingList.pop()
+    document.write(TravelPackingList) 
+    document.write("<br>")
+    TravelPackingList.pop()
+    document.write(TravelPackingList) 
+  </script>
+  <h2> ~Class And Object <br> Alizy's Interview for her visa 
+introduction : </h2>
+
+<p id="alizy"> </p>
+
+<script>
+    class student { 
+        constructor(name,year){
+            this.name = name ;
+            this.year = year;
+        }
+    
+    age(){
+        let date = new Date();
+        return date.getFullYear() -
+        this.year;
+    }
+     }
+     subject1 = new student("Alizy",2010);
+     document.getElementById("alizy").innerHTML=
+     "My name is " + subject1.name + " I was born on "+
+     subject1.year + " and my age is "+ 
+     subject1.age(); 
+</script>
+<h3> <i> ~Conditional Statment And 
+    Realtime Form Vailidation
+    <br> Alizy's time in italy
+</i></h3>
+
+  <hr>
+    <form id="loginForm" onsubmit="validate(event)">
+      <!-- Fieldset groups related elements in a form -->
+      <fieldset>
+  
+        <!-- Email input field -->
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <!-- Password input field with a minimum length requirement -->
+        <div>
+            <label for="password">Password:</label>
+            <!-- minlength attribute ensures the password is at least 8 characters long -->
+            <input type="password" id="password" name="password" minlength="8">
+        </div>
+
+        <!-- Age input field with minimum and maximum value requirements -->
+        <div>
+            <label for="age">Age:</label>
+            <!-- min and max attributes define the acceptable range of ages -->
+            <input type="number" id="age" name="age" min="12" max="50">
+        </div>
+
+        <!-- Submit button for the form -->
+        <button type="submit">Login</button>
+        
+      </fieldset>
+    </form>
+        <!-- Div for displaying validation messages -->
+        <div id="message"></div>
+
+        <!-- Link to the external JavaScript file -->
+        <script>
+            function validate(e){
+                e.preventDefault()
+                const email=document.getElementById("email").value;
+                const pass=document.getElementById("password").value;
+                const age=document.getElementById("age").value;
+                const msgBox=document.getElementById("message")
+                let message=" "
+    
+                if (email===""){
+                    message="please enter email"
+                    msgBox.style.color="red"
+                }
+               else if (pass===""){
+                    message="passoword should be 7 charcters"
+                    msgBox.style.colour="red"
+                }
+               else if (age===""){
+                    message="age must be more than 14 to be vailed"
+                    msgBox.style.color="red"
+                }
+                else{message="login sucsessful"
+                    msgBox.style.color=" green"
+                }
+                msgBox.innerText=message
+    
+            }
+        </script>
+</body>
+</html>
