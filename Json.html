@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Convert a Javascript object into a JASON,string and send it to the server
+    </h2>
+    <p id="result"></p>
+    <h1>
+        Javascript Callback
+    </h1>
+    <p>Do a calculation and then dispaly the result</p>
+    <p id="result2"></p>
+    <script>
+        var myobj={name: "Riya", age: 12, grade: 7};
+        var myJSON = JSON.stringify(myobj);
+        var newobj= JSON.parse(myJSON);
+        document.getElementById("result").innerHTML=newobj.name;
+        function myDisplayer(value){
+            document.getElementById("result2").innerHTML=value;
+        }
+        function myCalculator(num1,num2,myCallback){
+            let sum= num1 +num2;
+            myCallback(sum);
+        }
+        myCalculator(5,5,myDisplayer);
+    </script>
+    
+</body>
+</html>
