@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <style>
+    h2{
+        color: rgb(38, 44, 44);
+    }
+    h1{
+        color: rgb(2, 21, 21);
+    }
+   
+body {
+  background: linear-gradient(to right, #5fffbc, #957bfe); 
+
+ </style>
+</head>
+<body>
+    <h2>
+        NAME OF PERSON
+    </h2>
+    <p id="result"></p>
+    <h1>
+        Javascript Callback
+    </h1>
+    <p id="result2"></p>
+    <script>
+        var myobj={name: "Alizy", age: 14, grade: 9};
+        var myJSON = JSON.stringify(myobj);
+        var newobj= JSON.parse(myJSON);
+        document.getElementById("result").innerHTML=newobj.name;
+        function myDisplayer(value){
+            document.getElementById("result2").innerHTML=value;
+        }
+        function myCalculator(num1,num2,myCallback){
+            let sum= num1 +num2;
+            myCallback(sum);
+        }
+        myCalculator(16,13,myDisplayer);
+    </script>
+    
+</body>
+</html>
