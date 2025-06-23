@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+<!-- My CSS -->
+<link rel="stylesheet" href="style.css" />
+    <style>
+        h1{ 
+            color: aliceblue;
+        }
+        p{
+            color: rgb(190, 45, 127);
+        }
+        body{
+            font-family: 'Open Sans',sans-serif;
+            background-color: rgb(218, 184, 200);
+        }
+        #result{
+            border: solid 5px;
+            padding: 20px;
+        }
+        #input{
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Banking App</h1>>
+    <p class="text-center">Enter The Amount YOU WANT TO Credit/Debit</p>
+    <input type="number" name="amount" id="input" >
+    <div class="row">
+        <button type="button" onclick="Sum()" class="col-6 text-center">Credit</button>
+    <button type="button" onclick="Difference()" class="col-6 text-center">Debit</button>
+    </div><br>
+    <div class="container text-center">Your Current Balance: <b id="result"></b></div>
+    <script>
+        var balance=0
+        function Sum(){
+            //not .innertext, its .value ,because we are taking value from user
+            value=Number(document.getElementById("input").value)
+            balance=balance+value
+            //updating the balance
+            document.getElementById("result").innerHTML = balance;
+        }
+        function Difference(){
+            value=Number(document.getElementById("input").value)
+            //change the operator to minus
+            balance=balance-value
+            //updating the balance
+            document.getElementById("result").innerHTML = balance;
+        }
+    </script>
+</body>
+</html>
